@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//strncpyµÄÄ£ÄâÊµÏÖ
+//strncpyçš„æ¨¡æ‹Ÿå®ç°
 char* my_strncpy(char*dest, const char*src, size_t count)
 {
 	char* ret = dest;
@@ -25,9 +25,9 @@ char* my_strncpy(char*dest, const char*src, size_t count)
 int main()
 {
 	//char arr[] = "aaaaaaaaaaaa";
-	//strncpy(arr, "bit", 5);//µ±³¬¹ıÒª¿½±´µÄÄÚÈİµÄ³¤¶ÈÊ±£¬×Ô¶¯ÏòºóÃæ×Ô¶¯²¹Ê£ÏÂµÄ0£¬Ğ¡ÓÚÒª¿½±´µÄÄÚÈİµÄ³¤¶ÈÊ±£¬²»²¹0£¬½á¹ûÎªbit
+	//strncpy(arr, "bit", 5);//å½“è¶…è¿‡è¦æ‹·è´çš„å†…å®¹çš„é•¿åº¦æ—¶ï¼Œè‡ªåŠ¨å‘åé¢è‡ªåŠ¨è¡¥å‰©ä¸‹çš„0ï¼Œå°äºè¦æ‹·è´çš„å†…å®¹çš„é•¿åº¦æ—¶ï¼Œä¸è¡¥0ï¼Œç»“æœä¸ºbit
 	char arr[] = "aaaaaaaaaaaa";
-	my_strncpy(arr, "bit", 3);//biaaaaaaaaaa
+	my_strncpy(arr, "bit", 3);//bitaaaaaaaaa
 	//my_strncpy(arr, "bit", 5);//bit
 	printf("%s\n", arr);
 	system("pause");
