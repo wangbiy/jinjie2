@@ -3,12 +3,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-//ģ��ʵ��strstr
+//Ä£ÄâÊµÏÖstrstr
 char* my_strstr(const char* str1, const char* str2)
 {
-	char* s1 = str1;
-	char* s2 = str2;
-	char* cur = str1;
+	const char* s1 = str1;
+	const char* s2 = str2;
+	const char* cur = str1;
 	while (*cur)
 	{
 		s1 = cur;
@@ -19,7 +19,7 @@ char* my_strstr(const char* str1, const char* str2)
 			s2++;
 		}
 		if (*s2 == '\0')
-			return cur;
+			return (char*)cur;
 		cur++;
 	}
 	return NULL;
@@ -31,7 +31,7 @@ int main()
 	if (ret != NULL)
 		printf("%s\n", ret);
 	else
-		printf("�Ҳ���!\n");
+		printf("ÕÒ²»µ½!\n");
 	system("pause");
 	return 0;
 }
