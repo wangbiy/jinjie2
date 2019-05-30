@@ -3,17 +3,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-//strcpy的模拟实现
+//strcpy碌脛脛拢脛芒脢碌脧脰
 char* my_strcpy(char* dest, const char* src)
 {
-	char* ret = dest;
 	assert(dest != NULL);
 	assert(src != NULL);
-	while (*dest++ = *src++)
+	char *pdest = dest;
+	const char *psrc = src;
+	while (*pdest++ = *psrc++)
 	{
 		;
 	}
-	return ret;
+	return dest;
 }
 int main()
 {
