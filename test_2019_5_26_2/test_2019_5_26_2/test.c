@@ -3,24 +3,27 @@
 #include <stdlib.h>
 #include <string.h>
 //strncpy的模拟实现
-char* my_strncpy(char*dest, const char*src, size_t count)
+char* my_strncpy(char* dest, const char* src, size_t count)
 {
-	char* ret = dest;
+	char *pdest = dest;
+	const char *psrc = src;
+	assert(dest);
+	assert(src);
 	while (count--)
 	{
-		if (src != '\0')
+		if (psrc != '\0')
 		{
-			*dest = *src;
-			dest++;
-			src++;
+			*pdest = *psrc;
+			pdest++;
+			psrc++;
 		}
 		else
 		{
-			*dest = '\0';
-			return ret;
-		}
+			*pdest = '\0';
+			return dest;
+		}	
 	}
-	return ret;
+	return dest;	
 }
 int main()
 {
