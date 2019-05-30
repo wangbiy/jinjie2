@@ -2,28 +2,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-//Ä£ÄâÊµÏÖstrncat
+//æ¨¡æ‹Ÿå®ç°strncat
 char* my_strncat(char* dest, const char* src,size_t count)
 {
-	assert(dest != NULL);
-	assert(src != NULL);
-	char* ret = dest;
-	while (*dest)
+	char *pdest = dest;
+	const char *psrc = src;
+	assert(dest);
+	assert(src);
+	while (*pdest)
 	{
-		dest++;
+		pdest++;
 	}
 	while (count--)
 	{
-		*dest++ = *src++;
+		*pdest++ = *psrc++;
 	}
-	*dest = '\0';
-	return ret;
+	*pdest = '\0';
+	return dest;
 }
 int main()
 {
 	char arr[20] = "abc";
 	char brr[] = "pud";
-	my_strncat(arr, brr, 9);//ºóÃæ×Ô¶¯²¹Ò»¸ö'\0'
+	my_strncat(arr, brr, 9);//åé¢è‡ªåŠ¨è¡¥ä¸€ä¸ª'\0'
 	printf("%s\n",arr);
 	system("pause");
 	return 0;
