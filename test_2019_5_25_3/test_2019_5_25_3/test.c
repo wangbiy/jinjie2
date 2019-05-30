@@ -2,28 +2,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-//strcatµÄÄ£ÄâÊµÏÖ£¨×Ö·û´®µÄ×·¼Ó£©
+//strcatçš„æ¨¡æ‹Ÿå®ç°ï¼ˆå­—ç¬¦ä¸²çš„è¿½åŠ ï¼‰
 char* my_strcat(char* dest, const char* src)
 {
-	char* ret = dest;
-	assert(dest != NULL);
-	assert(src != NULL);
-	while (*dest)
+	char *pdest = dest;
+	const char *psrc = src;
+	assert(dest);
+	assert(src);
+	while (*pdest)
 	{
-		dest++;
+		pdest++;
 	}
-	while (*dest++ = *src++)
+	while (*pdest++ = *psrc++)
 	{
 		;
 	}
-	return ret;
+	return dest;
 }
 int main()
 {
 	char arr1[] = "hello ";
 	char arr2[] = "bit";
 	printf("%s\n", my_strcat(arr1, arr2));
-	//printf("%s\n", strcat(arr1, arr1));//ËÀÑ­»·£¬×Ô¼º¸ø×Ô¼ºÔö¼Ó,»á¸²¸Ç¡®\0¡¯
+	//printf("%s\n", strcat(arr1, arr1));//æ­»å¾ªç¯ï¼Œè‡ªå·±ç»™è‡ªå·±å¢åŠ ,ä¼šè¦†ç›–â€˜\0â€™
 	system("pause");
 	return 0;
 }
