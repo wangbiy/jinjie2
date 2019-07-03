@@ -4,23 +4,23 @@
 #include <string.h>
 int main()
 {
-	char arr[] = "abcdef";//Ä©Î²ÓĞ'\0'
+	char arr[] = "abcdef";//æœ«å°¾æœ‰'\0'
 	printf("%d\n", sizeof(arr));//7
-	printf("%d\n", sizeof(arr+0));//4 Ê×ÔªËØµØÖ·
-	printf("%d\n", sizeof(*arr));//1 Ê×ÔªËØ´óĞ¡
+	printf("%d\n", sizeof(arr+0));//4 é¦–å…ƒç´ åœ°å€
+	printf("%d\n", sizeof(*arr));//1 é¦–å…ƒç´ å¤§å°
 	printf("%d\n", sizeof(arr[1]));//1
-	printf("%d\n", sizeof(&arr));//4 Õû¸öÊı×éµÄµØÖ·
+	printf("%d\n", sizeof(&arr));//4 æ•´ä¸ªæ•°ç»„çš„åœ°å€
 	printf("%d\n", sizeof(*&arr));//7
-	printf("%d\n", sizeof(&arr+1));//4 Ìø¹ıÒ»¸öÊı×éµ½0µÄºóÃæ
-	printf("%d\n", sizeof(&arr[0]+1));//4 µÚ¶ş¸öÔªËØµÄµØÖ·
-	printf("***************************\n");
-	printf("%d\n", strlen(arr));//6 Ê×ÔªËØµÄµØÖ·£¬´ÓÊ×ÔªËØËãÆğ
+	printf("%d\n", sizeof(&arr+1));//4 è·³è¿‡ä¸€ä¸ªæ•°ç»„åˆ°0çš„åé¢
+	printf("%d\n", sizeof(&arr[0]+1));//4 ç¬¬äºŒä¸ªå…ƒç´ çš„åœ°å€
+	printf("***************************************\n");
+	printf("%d\n", strlen(arr));//6 é¦–å…ƒç´ çš„åœ°å€ï¼Œä»é¦–å…ƒç´ ç®—èµ·
 	printf("%d\n", strlen(arr+0));//6
-	printf("%d\n", strlen(*arr));//error Ê×ÔªËØµÄasciiÂëÖµÎª97,97µÄµØÖ·²»ÄÜ½âÒıÓÃ
-	printf("%d\n", strlen(arr[1]));//error µÚ¶ş¸öÔªËØasciiÂëÖµÎª98
+	printf("%d\n", strlen(*arr));//error é¦–å…ƒç´ çš„asciiç å€¼ä¸º97,97çš„åœ°å€ä¸èƒ½è§£å¼•ç”¨
+	printf("%d\n", strlen(arr[1]));//error ç¬¬äºŒä¸ªå…ƒç´ asciiç å€¼ä¸º98
 	printf("%d\n", strlen(&arr));//6
-	printf("%d\n", strlen(&arr+1));//Ëæ»úÖµ
-	printf("%d\n", strlen(&arr[0]+1));//5 µÚ¶ş¸öÔªËØµÄµØÖ·
+	printf("%d\n", strlen(&arr+1));//éšæœºå€¼
+	printf("%d\n", strlen(&arr[0]+1));//5 ç¬¬äºŒä¸ªå…ƒç´ çš„åœ°å€
 	system("pause");
 
 	return 0;
