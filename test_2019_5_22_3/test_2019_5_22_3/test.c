@@ -5,22 +5,22 @@
 int main()
 {
 	char arr[] = { 'a', 'b', 'c', 'd', 'e', 'f' };
-	printf("%d\n", sizeof(arr));//6 Õû¸öÊı×é
-	printf("%d\n", sizeof(arr+0));//4 Ê×ÔªËØµØÖ·
-	printf("%d\n", sizeof(*arr));//1 Ê×ÔªËØ£¨Í¨¹ıarr·ÃÎÊÊ×ÔªËØµØÖ·£¬½âÒıÓÃ£©
-	printf("%d\n", sizeof(arr[1]));//1 Ê×ÔªËØ
-	printf("%d\n", sizeof(&arr));//4 Õû¸öÊı×éµØÖ·
-	printf("%d\n", sizeof(&arr+1));//4 Ìø¹ıÒ»¸öÊı×éµ½4µÄºóÃæ 
-	printf("%d\n", sizeof(&arr[0]+1));// 4 µÚ¶ş¸öÔªËØµØÖ·
+	printf("%d\n", sizeof(arr));//6 æ•´ä¸ªæ•°ç»„
+	printf("%d\n", sizeof(arr+0));//4 é¦–å…ƒç´ åœ°å€
+	printf("%d\n", sizeof(*arr));//1 é¦–å…ƒç´ ï¼ˆé€šè¿‡arrè®¿é—®é¦–å…ƒç´ åœ°å€ï¼Œè§£å¼•ç”¨ï¼‰
+	printf("%d\n", sizeof(arr[1]));//1 é¦–å…ƒç´ 
+	printf("%d\n", sizeof(&arr));//4 æ•´ä¸ªæ•°ç»„åœ°å€
+	printf("%d\n", sizeof(&arr+1));//4 è·³è¿‡ä¸€ä¸ªæ•°ç»„åˆ°æœ€åä¸€ä¸ªå…ƒç´ çš„åé¢ 
+	printf("%d\n", sizeof(&arr[0]+1));// 4 ç¬¬äºŒä¸ªå…ƒç´ åœ°å€
 
 
-	printf("%d\n", strlen(arr));//Ëæ»úÊı strlenÕÒ'\0'
-	printf("%d\n", strlen(arr+0));//Ëæ»úÊı 
-	printf("%d\n", strlen(*arr));//error ¸østrlen´«µÄ²ÎÊıÊµ¼ÊÎªµØÖ·£¬arrÎªÊ×ÔªËØ¡¯a',µØÖ·Îª97µÄµØÖ·£¬½âÒıÓÃ·¢Éú´íÎó
-	printf("%d\n", strlen(arr[1]));//error 98µÄµØÖ·
-	printf("%d\n", strlen(&arr));//Ëæ»úÖµ£¨Êı×éµÄµØÖ·£©x=&arr
-	printf("%d\n", strlen(&arr+1));//x-6 Ëæ»úÖµ  
-	printf("%d\n", strlen(&arr[0]+1));//x-1 Ëæ»úÖµ
+	printf("%d\n", strlen(arr));//éšæœºæ•° strlenæ‰¾'\0'
+	printf("%d\n", strlen(arr+0));//éšæœºæ•° 
+	printf("%d\n", strlen(*arr));//error ç»™strlenä¼ çš„å‚æ•°å®é™…ä¸ºåœ°å€ï¼Œarrä¸ºé¦–å…ƒç´ â€™a',åœ°å€ä¸º97çš„åœ°å€ï¼Œè§£å¼•ç”¨å‘ç”Ÿé”™è¯¯
+	printf("%d\n", strlen(arr[1]));//error 98çš„åœ°å€
+	printf("%d\n", strlen(&arr));//éšæœºå€¼ï¼ˆæ•°ç»„çš„åœ°å€ï¼‰x=&arr
+	printf("%d\n", strlen(&arr+1));//x-6 éšæœºå€¼  
+	printf("%d\n", strlen(&arr[0]+1));//x-1 éšæœºå€¼
 	system("pause");
 	return 0;
 }
