@@ -4,22 +4,21 @@
 int main()
 {
 	char* p = "abcdef";
-	printf("%d\n", sizeof(p));//4 Ö¸Õë±äÁ¿´óĞ¡
+	printf("%d\n", sizeof(p));//4 æŒ‡é’ˆå˜é‡å¤§å°
 	printf("%d\n", sizeof(p + 1));//4
-	printf("%d\n", sizeof(*p));//1  p´æ'a'µÄµØÖ·£¬¶Ôp½âÒıÓÃ£¬Îª'a'µÄ´óĞ¡
+	printf("%d\n", sizeof(*p));//1  på­˜'a'çš„åœ°å€ï¼Œå¯¹pè§£å¼•ç”¨ï¼Œä¸º'a'çš„å¤§å°
 	printf("%d\n", sizeof(p[0]));//1
 	printf("%d\n", sizeof(&p));//4
-	printf("%d\n", sizeof(&p + 1));//4char* p=&a,char* *q=&p; q+1Ìø¹ıÒ»¸öchar*  ,&p+1 Ìø¹ıÒ»¸öchar*
-	printf("%d\n", sizeof(&p[0] + 1));//4 'b'µÄµØÖ·
-	printf("****************\n");
+	printf("%d\n", sizeof(&p + 1));//4char* p=&a,char* *q=&p; q+1è·³è¿‡ä¸€ä¸ªchar*  ,&p+1 è·³è¿‡ä¸€ä¸ªchar*
+	printf("%d\n", sizeof(&p[0] + 1));//4 'b'çš„åœ°å€
+	printf("***********************************\n");
 	printf("%d\n", strlen(p));//6
 	printf("%d\n", strlen(p + 1));//5
-	printf("%d\n", strlen(*p));//error Ê×ÔªËØµÄµØÖ·½âÒıÓÃÎªÊ×ÔªËØ
+	printf("%d\n", strlen(*p));//error é¦–å…ƒç´ çš„åœ°å€è§£å¼•ç”¨ä¸ºé¦–å…ƒç´ 
 	printf("%d\n", strlen(p[0]));//error
-	printf("%d\n", strlen(&p));//Ëæ»úÖµ Õû¸öÊı×éµÄµØÖ·
-	printf("%d\n", strlen(&p + 1));//Ëæ»úÖµ Ìø¹ıÒ»¸öchar*
+	printf("%d\n", strlen(&p));//éšæœºå€¼ æ•´ä¸ªæ•°ç»„çš„åœ°å€
+	printf("%d\n", strlen(&p + 1));//éšæœºå€¼ è·³è¿‡ä¸€ä¸ªchar*
 	printf("%d\n", strlen(&p[0] + 1));//5
-
 	system("pause");
 	return 0;
 }
